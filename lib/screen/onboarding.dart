@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:figma_to_flutter_movies_neon/Components/CustomOutLine.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatelessWidget {
@@ -67,7 +68,37 @@ class Onboarding extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: screenHeight*0.07,),
-                
+                CustomOutlineButton(
+                    strokeWidth: 4,
+                    radius: screenWidth*0.8,
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xFFFE53BB),
+                        Color(0xFF9E95C4).withOpacity(0),  // this color code get from figma design Linear(also get opacity)
+                        Color(0xFF6AB9CA).withOpacity(0),
+                        Color(0xFF09FBD3),
+                      ],
+                      stops: [0.2,0.4,0.6,1]
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          alignment: Alignment.bottomLeft,
+                          image: AssetImage(
+                            'assets/image_81.png'
+                          )
+                        )
+                      ),
+                    ),
+                    onPressed: (){
+
+                    },
+
+                )
               ],
             ))
           ],
