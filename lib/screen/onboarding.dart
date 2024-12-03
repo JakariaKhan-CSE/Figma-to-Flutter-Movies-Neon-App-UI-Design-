@@ -82,18 +82,12 @@ class Onboarding extends StatelessWidget {
                       ],
                       stops: [0.2,0.4,0.6,1]
                     ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          alignment: Alignment.bottomLeft,
-                          image: AssetImage(
-                            'assets/image_81.png'
-                          )
-                        )
-                      ),
-                    ),
+                    child: ClipOval(
+
+                        child: SizedBox(
+                            height: screenWidth * 0.7,
+                            width: screenWidth * 0.7,
+                            child: Image.asset('assets/image_81.png',fit: BoxFit.cover,alignment: Alignment.bottomLeft,))),
                     onPressed: (){
 
                     },
