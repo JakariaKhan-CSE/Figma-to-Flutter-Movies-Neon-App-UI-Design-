@@ -11,9 +11,9 @@ class SearchFieldWidget extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Container(
-        height: 36,
+        height: 46,
         decoration: BoxDecoration(
-            color: Color(0xFF767680), borderRadius: BorderRadius.circular(10)),
+            color: Color(0xFF767680).withOpacity(0.12), borderRadius: BorderRadius.circular(10)),
         child: Row(
           children: [
             SizedBox(
@@ -23,6 +23,9 @@ class SearchFieldWidget extends StatelessWidget {
               Icons.search,
               size: 18,
               color: Color(0xFFFFFFFF).withOpacity(0.6),
+            ),
+            SizedBox(
+              width: 8,
             ),
             Expanded(
                 child: TextField(
