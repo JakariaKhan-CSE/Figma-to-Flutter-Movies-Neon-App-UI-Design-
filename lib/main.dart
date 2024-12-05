@@ -1,3 +1,4 @@
+import 'package:figma_to_flutter_movies_neon/screen/home_screen.dart';
 import 'package:figma_to_flutter_movies_neon/screen/onboarding.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: GoogleFonts.openSans().fontFamily
       ),
-      home: Onboarding(),
+      home: HomeScreen(),
     );
   }
 }
